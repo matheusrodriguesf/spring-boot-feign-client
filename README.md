@@ -2,7 +2,7 @@
 
 Client para consumir  os dados de endereço do Web Service VIACEP usando OpenFeign.
 
-Recebe como parâmetro o CEP informado e retorna uma estrutura XML com os seguintes campos: cep, logradouro, complemento, bairro localidade e uf.
+Recebe como parâmetro o CEP informado e retorna uma estrutura XML com os seguintes campos: cep, logradouro, complemento, bairro localidade, uf ibgem gia,ddd e siafi.
 
 # Desenvolvimento
 ## Tecnologias
@@ -43,12 +43,18 @@ Realizar uma requisição do tipo GET para o endpoint.
 ### Resposta
 ```
 {
-  "cep": "01001-000",
-  "logradouro": "Praça da Sé",
-  "complemento": "lado ímpar",
-  "bairro": "Sé",
-  "localidade": "São Paulo",
-  "uf": "SP"
+<xmlcep>
+    <cep>01001-000</cep>
+    <logradouro>Praça da Sé</logradouro>
+    <complemento>lado ímpar</complemento>
+    <bairro>Sé</bairro>
+    <localidade>São Paulo</localidade>
+    <uf>SP</uf>
+    <ibge>3550308</ibge>
+    <gia>1004</gia>
+    <ddd>11</ddd>
+    <siafi>7107</siafi>
+</xmlcep>
 }
 ```
 
